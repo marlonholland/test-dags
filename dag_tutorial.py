@@ -76,4 +76,3 @@ t3 = BashOperator(
 )
 
 t1 >> [t2, t3]
-It’s a DAG definition
