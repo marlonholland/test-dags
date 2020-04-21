@@ -1,2 +1,2 @@
 # Public DAGS repository
-This repository contains DAGS for testing and training purposes only.
+This repository contains DAGS for Azure Airflow VM configuration ONLY.
