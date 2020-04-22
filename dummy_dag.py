@@ -2,6 +2,8 @@ from datetime import datetime
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.python_operator import PythonOperator
+from airflow.contrib.hooks.snowflake_hook import SnowflakeHook
+from airflow.contrib.operators.snowflake_operator import SnowflakeOperator
 
 def print_hello():
     return 'Hello world!'
