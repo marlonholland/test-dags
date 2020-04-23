@@ -13,13 +13,13 @@ args = {
 	"start_date": airflow.utils.dates.days_ago(2)}
 
 dag = DAG(
-    dag_id="ntt_snfk_conn", 
+    dag_id="snowflake_conn", 
 	default_args=args, 
 	schedule_interval=None
 )
 
 create_query = [
-    """create table sap.test_table;""", 
+    """create table PUBLIC.TEST_TABLE;""", 
 ]
 
 
@@ -27,7 +27,7 @@ with dag:
     create = SnowflakeOperator(
         task_id="snowflake_create",
         sql=create_query,
-        snowflake_conn_id="ntt_snfk_conn",
+        snowflake_conn_id="snowflake_conn",
     )
 
    
